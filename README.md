@@ -1,5 +1,5 @@
 <div align="center">
-    <img alt="Imagen de portada" src="assets/portada.png" width="50%">
+    <img alt="Imagen de portada" src="assets/portada.png" width="80%">
 </div><br><br>
 
 # Challenge <em>Amigo Secreto</em>

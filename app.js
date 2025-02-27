@@ -18,8 +18,25 @@ function actualizarLista(){
     let listaAmigos = document.getElementById('listaAmigos');
     listaAmigos.innerHTML = '';
     for (i = 0 ; i < amigos.length; i++){
+        if(amigos.length == 1){
+            let resultado = document.getElementById('resultado');
+            resultado.innerHTML = '';
+        }
         let itemNuevo = document.createElement('li');
         itemNuevo.textContent = amigos[i];
         listaAmigos.appendChild(itemNuevo); 
     }
 };
+
+// Funcion para sortear amigo
+function sortearAmigo () {
+    if(amigos.length < 2){
+        alert('Cantidad de amigos insuficiente');
+    } else {
+        let amigoAleatorio = Math.floor(Math.random() * amigos.length);
+        let resultado = document.getElementById('resultado');
+        resultado.innerHTML = `El amigo secreto es ${amigos[amigoAleatorio]}`;
+        listaAmigos.innerHTML = '';
+        amigos = [];
+    }
+}
